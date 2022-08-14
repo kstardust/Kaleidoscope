@@ -45,5 +45,10 @@ endif()
 
 # include_directories("src/" "mpc/" "/usr/local/include")
 
-add_executable(main src/main.cpp)
+set(SRC_FILES
+  src/ast.h
+  src/ast.cpp
+  )
+
+add_executable(main src/main.cpp ${SRC_FILES})
 target_link_libraries(main ${llvm_libs})
